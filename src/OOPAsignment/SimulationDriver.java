@@ -39,7 +39,6 @@ public class SimulationDriver {
         answerTypes = questionType.getAnswerTypes(); 
         
         Random rand = new Random();
-
         int  n = rand.nextInt(100) + 1;
         // Create Students to answer quetions
         Student aStudent;
@@ -49,13 +48,10 @@ public class SimulationDriver {
             Response response = new Response(j.toString(), answerTypes.get(j));
             aStudent = new Student(response);
             students.add(aStudent);
-            vService.submitAnwser(response);
+            vService.SubmitAnswer(response);
         }
         
-        vService.toString();
-        
-        
-        
+        System.out.println(vService.toString());  
         
         
     }

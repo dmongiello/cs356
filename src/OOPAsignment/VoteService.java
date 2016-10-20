@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public interface VoteService {
     
     public void SetQuestionType(QuestionType questionType);
-    public void submitAnwser(Response response);
+    public void SubmitAnswer(Response response);
     
     @Override
     public String toString();

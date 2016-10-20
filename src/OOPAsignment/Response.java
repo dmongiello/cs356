@@ -35,8 +35,18 @@ public class Response  implements Comparable<Response> {
     }
     @Override
     public int compareTo(Response other) {
-     int cmp = answer.compareTo(other.getAnswer());
-     return cmp;
+     Answer a = this.answer; 
+     if (a == null) 
+     {
+         if (other == null || other.answer == null)
+         {
+             return 0; 
+         }
+         return -1;
+     }
+     
+     return this.answer.getAnswer().compareTo(other.answer.getAnswer());
+     
    }
     
 }

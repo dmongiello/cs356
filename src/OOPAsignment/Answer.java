@@ -13,10 +13,30 @@ public abstract class Answer implements Comparable<Answer> {
     protected String answer; 
     abstract String getAnswer();
     
+    // Method compareTo(other)
+    // This makes the compare to other like types so the objects can
+    // be sorted. 
     @Override
-    public int compareTo(Answer other) {
-     int cmp = answer.compareTo(other.getAnswer());
-     return cmp;
+    public int compareTo(Answer other) 
+    {
+    String a = answer; 
+     if (a == null) 
+     {
+         if (other == null)
+         {
+             return 0; 
+         }
+         return -1;
+     }
+    
+     return a.compareTo(other.getAnswer());
+     
+   }
+    
+   // This overides the to string method to display answer for the object
+   public String toString()
+   {
+       return answer; 
    }
     
 }
